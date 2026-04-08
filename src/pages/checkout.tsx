@@ -57,7 +57,7 @@ export default function Checkout() {
         const productList = items
             .map(item => `${item.product.name} (Size: ${item.size}, Color: ${item.color}, Qty: ${item.quantity}) - ₹${(item.product.price * item.quantity).toLocaleString('en-IN')}`)
             .join('%0A');
-        const altLine = altPhone ? `%0AAlternate / Email: ${altPhone}` : '';
+        // const altLine = altPhone ? `%0AAlternate / Email: ${altPhone}` : '';
         const landmarkLine = landmark ? `%0ALandmark: ${landmark}` : '';
         const msg =
             `*Order from TAWAT*%0A` +
@@ -65,7 +65,7 @@ export default function Checkout() {
             `━━━━━━━━━━━━━━━━━━━━%0A` +
             `*Total Items:* ${totalItems}%0A*Total Amount:* ₹${totalPrice.toLocaleString('en-IN')}%0A` +
             `━━━━━━━━━━━━━━━━━━━━%0A` +
-            `*Delivery Details*%0AName: ${name}%0APhone: ${phone}${altLine}%0AAddress: ${address}${landmarkLine}%0APincode: ${pincode}`;
+            `*Delivery Details*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}${landmarkLine}%0APincode: ${pincode}`;
 
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
     };
