@@ -4,13 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import logo from '../assets/logo.png';
 
-
-const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'Shop', path: '/shop' },
-  { label: 'About', path: '/about' },
-];
-
+// Links expanded for easier customization
 export default function Header() {
   const { totalItems } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,16 +18,25 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center">
-          {navLinks.map(({ label, path }) => (
-            <Link
-              key={label}
-              to={path}
-              className="text-[0.85rem] font-medium tracking-[0.08em] uppercase text-gray-500 hover:text-[#0a0a0a] transition-colors duration-200"
-            >
-              {label}
-            </Link>
-          ))}
+        <nav className="hidden md:flex gap-8 items-center cursor-pointer">
+          <Link
+            to="/"
+            className="text-[0.85rem] font-medium tracking-[0.08em] uppercase text-gray-500 hover:text-[#0a0a0a] transition-colors duration-200"
+          >
+            Home
+          </Link>
+          <Link
+            to="/shop"
+            className="text-[0.85rem] font-extrabold tracking-[0.08em] uppercase text-[#c9a96e] hover:text-[#b08d55] transition-colors duration-200"
+          >
+            Shop
+          </Link>
+          <Link
+            to="/about"
+            className="text-[0.85rem] font-medium tracking-[0.08em] uppercase text-gray-500 hover:text-[#0a0a0a] transition-colors duration-200"
+          >
+            About
+          </Link>
         </nav>
 
         {/* Right Actions */}
@@ -93,17 +96,35 @@ export default function Header() {
             transition={{ duration: 0.25, ease: 'easeInOut' }}
             className="overflow-hidden bg-white border-t border-gray-100"
           >
-            <div className="flex flex-col gap-4 px-8 py-5">
-              {[...navLinks, { label: 'Cart', path: '/cart' }].map(({ label, path }) => (
-                <Link
-                  key={label}
-                  to={path}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-base font-medium text-[#0a0a0a] hover:text-[#c9a96e] transition-colors duration-200"
-                >
-                  {label}
-                </Link>
-              ))}
+            <div className="flex flex-col gap-4 px-8 py-5 cursor-pointer">
+              <Link
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className="text-base font-medium text-[#0a0a0a] hover:text-[#c9a96e] transition-colors duration-200"
+              >
+                Home
+              </Link>
+              <Link
+                to="/shop"
+                onClick={() => setMenuOpen(false)}
+                className="text-base font-extrabold text-[#c9a96e] hover:text-[#b08d55] transition-colors duration-200"
+              >
+                Shop
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setMenuOpen(false)}
+                className="text-base font-medium text-[#0a0a0a] hover:text-[#c9a96e] transition-colors duration-200"
+              >
+                About
+              </Link>
+              <Link
+                to="/cart"
+                onClick={() => setMenuOpen(false)}
+                className="text-base font-medium text-[#0a0a0a] hover:text-[#c9a96e] transition-colors duration-200"
+              >
+                Cart
+              </Link>
             </div>
           </motion.div>
         )}

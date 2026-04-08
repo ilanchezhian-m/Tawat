@@ -67,7 +67,7 @@ export default function Shop() {
 
       {/* Page Header */}
       <div className="max-w-[1400px] mx-auto px-8 pt-16 pb-12 border-b border-gray-100">
-        <p className="text-[0.7rem] tracking-[0.2em] uppercase text-gray-400 mb-2">SS 2025</p>
+        {/* <p className="text-[0.7rem] tracking-[0.2em] uppercase text-gray-400 mb-2">SS 2025</p> */}
         <h1 className="font-extrabold tracking-[-0.02em] text-[#0a0a0a] mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
           All Products
         </h1>

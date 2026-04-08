@@ -15,6 +15,7 @@ export default function ProductDetails() {
   const product = products.find(p => p.id === Number(id));
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [selectedColor, setSelectedColor] = useState<ColorVariant | null>(null);
+  const [activeImage, setActiveImage] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const [sizeError, setSizeError] = useState(false);
@@ -70,8 +71,8 @@ export default function ProductDetails() {
           <div className="rounded-2xl overflow-hidden bg-gray-50 mb-4" style={{ aspectRatio: '1/1' }}>
             <AnimatePresence mode="wait">
               <motion.img
-                key={activeColor?.image}
-                src={activeColor?.image ?? ''}
+                key={activeImage ?? activeColor?.image}
+                src={activeImage ?? activeColor?.image ?? ''}
                 alt={product.name}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -87,12 +88,23 @@ export default function ProductDetails() {
             {product.colors.map(c => (
               <button
                 key={c.name}
-                onClick={() => setSelectedColor(c)}
+                onClick={() => { setSelectedColor(c); setActiveImage(null); }}
                 className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 p-0 ${
-                  activeColor?.name === c.name ? 'border-[#0a0a0a]' : 'border-gray-200 hover:border-gray-400'
+                  (!activeImage && activeColor?.name === c.name) ? 'border-[#0a0a0a]' : 'border-gray-200 hover:border-gray-400'
                 }`}
               >
                 <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
+              </button>
+            ))}
+            {product.additionalImages?.map((img, idx) => (
+              <button
+                key={`add-${idx}`}
+                onClick={() => setActiveImage(img)}
+                className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-200 p-0 ${
+                  activeImage === img ? 'border-[#0a0a0a]' : 'border-gray-200 hover:border-gray-400'
+                }`}
+              >
+                <img src={img} alt={`Additional ${idx + 1}`} className="w-full h-full object-cover bg-gray-50" />
               </button>
             ))}
           </div>
@@ -135,7 +147,7 @@ export default function ProductDetails() {
             )}
           </div>
 
-          <p className="text-[0.92rem] text-gray-500 leading-[1.8] mb-8">{product.description}</p>
+         
 
           {/* ── Color selector ────────────────────────────────────── */}
           {product.colors.length > 0 && (
@@ -346,6 +358,8 @@ export default function ProductDetails() {
                 )}
               </AnimatePresence>
             </motion.button>
+
+             <p className="text-[0.92rem] text-gray-500 leading-[1.8] mb-8">{product.description}</p>
 
             {/* <motion.button
               id="buy-now-btn"

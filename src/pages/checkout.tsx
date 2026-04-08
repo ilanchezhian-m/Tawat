@@ -106,9 +106,9 @@ export default function Checkout() {
                                         className={inputCls}
                                     />
                                 </Field>
-                                <Field label="Alternate Phone / Email">
+                                {/* <Field label="Alternate Phone / Email">
                                     <input id="checkout-alt" placeholder="Optional" value={altPhone} onChange={e => setAltPhone(e.target.value)} className={inputCls} />
-                                </Field>
+                                </Field> */}
                             </div>
 
                             <Field label="Complete Address" required>
@@ -182,8 +182,8 @@ export default function Checkout() {
                         <button
                             id="place-order-btn"
                             onClick={handlePlaceOrder}
-                            className="w-full flex items-center justify-center gap-3 py-5 bg-gray-200  hover:bg-gray-800 text-black font-bold text-[1rem] tracking-wide rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg group"
-                             style={{ background: 'linear-gradient(135deg, #3aa807ff, #27f048ff)' }}
+                            className="w-full flex items-center justify-center gap-3 py-5 bg-gray-200  hover:bg-gray-800 text-white font-bold text-[1rem] tracking-wide rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg group"
+                             style={{ background: 'linear-gradient(135deg, #000000ff, #000000ff)' }}
                         >
                             Place Order via WhatsApp
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />

@@ -1,6 +1,9 @@
 // ─── Imports ────────────────────────────────────────────────────────────────
 import sportImage1 from '../assets/sport/image1.jpg';
 import sportImage2 from '../assets/sport/image2.jpg';
+import sportImage3 from '../assets/sport/image3.jpg';
+import sportImage4 from '../assets/sport/sizeinfo.jpg';
+
 import skinFullsleeve1 from '../assets/skinfullsleeve/fullsleeveimage1.jpg';
 import skinFullsleeve2 from '../assets/skinfullsleeve/fullsleeveimage2.jpg';
 import halfsleevePolo1 from '../assets/halfsleevepolo/halfsleeveimage1.jpg';
@@ -38,6 +41,7 @@ export interface Product {
   sizes: string[];
   preOrderSizes?: string[];
   colors: ColorVariant[];
+  additionalImages?: string[];
   description: string;
   tag?: string;
   badge?: string;
@@ -68,6 +72,7 @@ export const products: Product[] = [
         hoverImage: sportImage2,
       },
     ],
+    additionalImages: [sportImage3, sportImage4],
     description:
       'Premium sport-performance tee available in White and Black. Sizes S & XXXL are on pre-order only. Available sizes: M, L, XL, XXL.',
     tag: 'Sport',
@@ -185,6 +190,7 @@ export const products: Product[] = [
         hoverImage: allplay1,
       },
     ],
+     additionalImages: [ sportImage4],
     description:
       'Get 2 premium tees at an unbeatable price. Choose between Blue+Black or Red+Grey combo packs.',
     tag: 'Bestseller',
