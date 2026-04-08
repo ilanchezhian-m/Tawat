@@ -33,7 +33,7 @@ export default function Checkout() {
 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
-    const [altPhone, setAltPhone] = useState('');
+    // const [altPhone, setAltPhone] = useState('');
     const [address, setAddress] = useState('');
     const [pincode, setPincode] = useState('');
     const [landmark, setLandmark] = useState('');
