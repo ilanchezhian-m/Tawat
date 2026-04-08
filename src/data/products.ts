@@ -1,3 +1,21 @@
+// ─── Imports ────────────────────────────────────────────────────────────────
+import sportImage1 from '../assets/sport/image1.jpg';
+import sportImage2 from '../assets/sport/image2.jpg';
+import skinFullsleeve1 from '../assets/skinfullsleeve/fullsleeveimage1.jpg';
+import skinFullsleeve2 from '../assets/skinfullsleeve/fullsleeveimage2.jpg';
+import halfsleevePolo1 from '../assets/halfsleevepolo/halfsleeveimage1.jpg';
+import halfsleevePolo2 from '../assets/halfsleevepolo/halfsleeveimage2.jpg';
+import halfsleevePolo3 from '../assets/halfsleevepolo/halfsleeveimage3.jpg';
+import nova1 from '../assets/nova/Nova.jpg';
+import fullsleeve1 from '../assets/skinfullsleeve/fullsleeveimage1.jpg';
+import fullsleeve2 from '../assets/skinfullsleeve/fullsleeveimage2.jpg';
+import allplay1 from '../assets/allplay/allplayimage1.jpg';
+import allplay2 from '../assets/allplay/allplayimage2.jpg';
+import shakers1 from '../assets/shakers/Shakersiamge1.jpg';
+import shakers2 from '../assets/shakers/Shakersiamge2.jpg';
+import shakers3 from '../assets/shakers/Shakersiamge3.jpg';
+import shakers4 from '../assets/shakers/Shakersiamge4.jpg';
+
 // ─── Category ────────────────────────────────────────────────────────────────
 export type Category = 'All' | 'SPORT' | 'SKIN' | 'POLO' | 'NOVA' | 'ALL PLAY COMBO' | 'SHAKERS';
 
@@ -40,14 +58,14 @@ export const products: Product[] = [
       {
         name: 'black',
         swatch: '#0a0a0a',
-        image: '/src/assets/sport/image1.jpg',
-        hoverImage: '/src/assets/sport/image2.jpg',
+        image: sportImage1,
+        hoverImage: sportImage2,
       },
       {
         name: 'white',
         swatch: '#f5f5f5',
-        image: '/src/assets/sport/image2.jpg',
-        hoverImage: '/src/assets/sport/image2.jpg',
+        image: sportImage2,
+        hoverImage: sportImage2,
       },
     ],
     description:
@@ -67,15 +85,15 @@ export const products: Product[] = [
       {
         name: 'Navy',
         swatch: '#1e3a5f',
-        image: '/src/assets/skinfullsleeve/fullsleeveimage1.jpg',
-        hoverImage: '/src/assets/skinfullsleeve/fullsleeveimage2.jpg',
+        image: skinFullsleeve1,
+        hoverImage: skinFullsleeve2,
         note: 'Below 150 GSM',
       },
       {
         name: 'Grey',
         swatch: '#9ca3af',
-          image: '/src/assets/skinfullsleeve/fullsleeveimage2.jpg',
-        hoverImage: '/src/assets/skinfullsleeve/fullsleeveimage1.jpg',
+        image: skinFullsleeve2,
+        hoverImage: skinFullsleeve1,
         note: 'Above 150 GSM',
       },
     ],
@@ -96,20 +114,20 @@ export const products: Product[] = [
       {
         name: 'Lemon',
         swatch: '#ffe135',
-        image: '/src/assets/halfsleevepolo/halfsleeveimage1.jpg',
-        hoverImage: '/src/assets/halfsleevepolo/halfsleeveimage2.jpg',
+        image: halfsleevePolo1,
+        hoverImage: halfsleevePolo2,
       },
       {
         name: 'Greymil',
         swatch: '#6b7280',
-        image: '/src/assets/halfsleevepolo/halfsleeveimage2.jpg',
-        hoverImage: '/src/assets/halfsleevepolo/halfsleeveimage2.jpg',
+        image: halfsleevePolo2,
+        hoverImage: halfsleevePolo2,
       },
       {
         name: 'Pistachio',
         swatch: '#93c47d',
-        image: '/src/assets/halfsleevepolo/halfsleeveimage3.jpg',
-        hoverImage: '/src/assets/halfsleevepolo/halfsleeveimage1.jpg',
+        image: halfsleevePolo3,
+        hoverImage: halfsleevePolo1,
       },
     ],
     description:
@@ -129,14 +147,14 @@ export const products: Product[] = [
       {
         name: 'Classic',
         swatch: '#374151',
-        image: '/src/assets/nova/Nova.jpg',
-        hoverImage: '/src/assets/fullsleeve/fullsleeveimage1.jpg',
+        image: nova1,
+        hoverImage: fullsleeve1,
       },
       {
         name: 'Alt',
         swatch: '#1f2937',
-        image: '/src/assets/fullsleeve/fullsleeveimage1.jpg',
-        hoverImage: '/src/assets/fullsleeve/fullsleeveimage2.jpg',
+        image: fullsleeve1,
+        hoverImage: fullsleeve2,
       },
     ],
     description:
@@ -157,14 +175,14 @@ export const products: Product[] = [
       {
         name: 'Blue + Black',
         swatch: '#3b82f6',
-        image: '/src/assets/allplay/allplayimage1.jpg',
-        hoverImage: '/src/assets/allplay/allplayimage2.jpg',
+        image: allplay1,
+        hoverImage: allplay2,
       },
       {
         name: 'Red + Grey',
         swatch: '#ef4444',
-        image: '/src/assets/allplay/allplayimage2.jpg',
-        hoverImage: '/src/assets/allplay/allplayimage1.jpg',
+        image: allplay2,
+        hoverImage: allplay1,
       },
     ],
     description:
@@ -184,20 +202,20 @@ export const products: Product[] = [
       {
         name: 'Sky Blue',
         swatch: '#38bdf8',
-        image: '/src/assets/shakers/Shakersiamge1.jpg',
-        hoverImage: '/src/assets/shakers/Shakersiamge2.jpg',
+        image: shakers1,
+        hoverImage: shakers2,
       },
       {
         name: 'Pink',
         swatch: '#f472b6',
-        image: '/src/assets/shakers/Shakersiamge2.jpg',
-        hoverImage: '/src/assets/shakers/Shakersiamge3.jpg',
+        image: shakers2,
+        hoverImage: shakers3,
       },
       {
         name: 'Black',
         swatch: '#0a0a0a',
-        image: '/src/assets/shakers/Shakersiamge3.jpg',
-        hoverImage: '/src/assets/shakers/Shakersiamge4.jpg',
+        image: shakers3,
+        hoverImage: shakers4,
       },
     ],
     description:

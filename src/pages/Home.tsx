@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import { products, categories, type Category } from '../data/products';
+import sportImg3 from '../assets/sport/image3.jpg';
 
 // ─── Variants ─────────────────────────────────────────────────────────────────
 const containerVariants: Variants = {
@@ -44,7 +45,7 @@ export default function Home() {
         style={{ height: 'calc(100vh - 64px)', minHeight: '520px' }}
       >
         <img
-          src="/src/assets/sport/image3.jpg"
+          src={sportImg3}
           alt="TAWAT Hero"
           className="absolute inset-0 w-full h-full object-contain bg-gray-100"
           style={{ objectPosition: 'center top' }}
@@ -60,9 +61,9 @@ export default function Home() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 max-w-[1400px] mx-auto px-8 pb-20 w-full"
         >
-          <p className="text-[0.75rem] tracking-[0.25em] uppercase text-[#c9a96e] font-semibold mb-4">
+          {/* <p className="text-[0.75rem] tracking-[0.25em] uppercase text-[#c9a96e] font-semibold mb-4">
             SS 2025 Collection
-          </p>
+          </p> */}
           <h1
             className="font-extrabold leading-[0.95] tracking-[-0.02em] text-white mb-8 max-w-2xl"
             style={{ fontSize: 'clamp(2.8rem, 8vw, 6rem)' }}
